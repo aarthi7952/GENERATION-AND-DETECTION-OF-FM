@@ -65,13 +65,39 @@ To write a program for Frequency Modulation and Demodulation using SCILAB and to
 ## MODEL GRAPH:
 <img width="512" height="365" alt="image" src="https://github.com/user-attachments/assets/dfe6bc64-2b6f-4afa-ae79-95391859ab04" />
 
-## PROGRAM
+## PROGRAM:
+```
+Am=19;
+Fm=285;
+b = 3.8;
+Ac=38;
+Fc=2850;
+Fs=2850000;
+t=0:1/Fs:2/Fm;
 
-## TABULATION
+em = Am*cos(2*3.14*Fm*t);
+subplot(3,1,1);
+plot(t,em);
+xgrid;
+ec = Ac*cos(2*3.14*Fc*t);
+subplot(3,1,2);
+plot(t,ec);
+xgrid;
+efm = Ac * cos((2*3.14*Fc*t) + ( b*sin(2*3.14*Fm*t)));
+subplot(3,1,3);
+plot(t,efm);
+xgrid;
+```
 
-## CALCULATION
+## TABULATION:
+![WhatsApp Image 2025-11-21 at 14 03 25_12a8f560](https://github.com/user-attachments/assets/73f414cb-4fa8-4a45-9e49-5455bfdfc385)
 
-## OUTPUT
+## CALCULATION:
+![WhatsApp Image 2025-11-21 at 14 00 12_1f7071eb](https://github.com/user-attachments/assets/c3158344-3935-4900-b474-eae67d98116b)
 
-## RESULT
+## OUTPUT:
+<img width="766" height="445" alt="Screenshot 2025-11-21 134323" src="https://github.com/user-attachments/assets/e0d78713-f14a-47d3-adc3-b5d733b6f8eb" />
+
+## RESULT:
+Thus, the frequency modulation and demodulation is successfully done and the output is experimentally verified.
 
